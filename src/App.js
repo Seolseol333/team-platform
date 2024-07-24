@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import SignUpForm from './components/SignUpForm';
 
 function App() {
+  const name = '회원가입';
+  const style = {
+    backgroundColor: 'white',
+    color: 'black',
+    fontSize: '48px',
+    fontWeight: 'bold',
+    padding: 50};
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div style={style}>{name} </div>
+    <SignUpForm />
   );
 }
 
