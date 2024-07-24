@@ -1,5 +1,6 @@
 import React from 'react';
 import SignUpForm from './components/SignUpForm';
+import TermsPage from './components/TermsPage';
 
 function App() {
   const name = '회원가입';
@@ -8,14 +9,32 @@ function App() {
     color: 'black',
     fontSize: '48px',
     fontWeight: 'bold',
-    padding: 50
+    padding: 50,
+    textAlign: 'center'
+  };
+
+  const containerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
   };
 
   return (
-    <div>
-      <div style={style}>{name}</div>
-      <SignUpForm />
-    </div>
+    <Router>
+      <div style={containerStyle}>
+        <Routes>
+          <route path="/" element={
+            <>
+              <div style={style}>{name}</div>
+              <SignUpForm />
+            </>
+          } />
+          <Route path="/terms" element={<TermsPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
