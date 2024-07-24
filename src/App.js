@@ -11,8 +11,10 @@ function App() {
     padding: 50};
   
   return (
-    <div style={style}>{name} </div>
-    <SignUpForm />
+    <div>
+      <div style={style}>{name} </div>
+      <SignUpForm />
+    </div>
   );
 }
 
