@@ -20,7 +20,7 @@ function App() {
     alignItems: 'center',
     justifyContent: 'center', 
     height: '100vh', 
-    padding: '20px',
+    padding: '30px',
     boxSizing: 'border-box',
   };
 
