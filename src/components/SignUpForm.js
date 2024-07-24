@@ -62,4 +62,50 @@ const SignUpForm = () => {
   );
 };
 
+const styles = {
+    form: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        maxWidth: '400px',
+        margin: '0 auto',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '10px',
+    backgroundColor: '#f9f9f9',
+  },
+  formGroup: {
+    marginBottom: '15px',
+    width: '100%',
+  },
+  label: {
+    display: 'block',
+    marginBottom: '5px',
+    fontWeight: 'bold',
+  },
+  input: {
+    width: '100%',
+    padding: '8px',
+    borderRadius: '4px',
+    border: '1px solid #ccc',
+  },
+  error: {
+    color: 'red',
+    fontSize: '12px',
+    marginTop: '5px',
+  },
+  button: {
+    padding: '10px 20px',
+    borderRadius: '5px',
+    border: 'none',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+  },
+};
+
+
+
 export default SignUpForm;
