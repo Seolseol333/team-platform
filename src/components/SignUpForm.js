@@ -30,13 +30,15 @@ const SignUpForm = () => {
       nickname: Yup.string().required('닉네임을 입력해주세요'),
       password: Yup.string()
         .min(6, '비밀번호는 최소 6자 이상이어야 합니다')
+        .matches(/[a-zA-Z]/, '비밀번호는 영문자를 포함해야 합니다')
+        .matches(/\d/, '비밀번호는 숫자를 포함해야 합니다')
+        .matches(/[!@#$%^&*(),.?":{}|<>]/, '비밀번호는 특수문자를 포함해야 합니다')
         .required('비밀번호를 입력해주세요'),
       confirmPassword: Yup.string()
         .oneOf([Yup.ref('password'), null], '비밀번호가 일치하지 않습니다')
         .required('비밀번호 확인을 입력해주세요'),
     }),
     onSubmit: values => {
-      // 유효성 검사 통과 후 약관 동의 페이지로 이동
       navigate('/terms');
     },
   });
@@ -85,20 +87,20 @@ const SignUpForm = () => {
 
 const styles = {
   form: {
-    display: 'flex', // 폼을 flexbox 컨테이너로 설정하여 내부 요소를 유연하게 배치할 수 있습니다.
-    flexDirection: 'column', // flexbox 방향을 세로로 설정하여 내부 요소들이 위에서 아래로 배치됩니다.
-    alignItems: 'center', // flexbox의 내부 요소들을 수직 중앙으로 정렬합니다.
-    justifyContent: 'center', // flexbox의 내부 요소들을 수평 중앙으로 정렬합니다.
-    maxWidth: '500px', // 폼의 최대 너비를 500px로 제한합니다.
-    margin: '0 auto', // 폼을 수평 중앙에 배치합니다. 위아래 마진은 0이고 좌우 마진은 자동으로 설정됩니다.
-    padding: '20px', // 폼 내부의 모든 면에 20px의 패딩을 추가합니다.
-    border: '1px solid #ccc', // 폼에 회색(#ccc) 1px 실선 테두리를 추가합니다.
-    borderRadius: '10px', // 폼의 모서리를 둥글게 설정하여 10px 반지름을 가집니다.
-    backgroundColor: '#f9f9f9', // 폼의 배경색을 연한 회색(#f9f9f9)으로 설정합니다.
+    display: 'flex', 
+    flexDirection: 'column', 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    maxWidth: '500px', 
+    margin: '0 auto',
+    padding: '20px', 
+    border: '1px solid #ccc', 
+    borderRadius: '10px', 
+    backgroundColor: '#f9f9f9',
   },
   formGroup: {
-    marginBottom: '15px', // 각 폼 그룹 아래에 15px의 마진을 추가합니다.
-    width: '100%', // 폼 그룹의 너비를 부모 요소의 100%로 설정합니다.
+    marginBottom: '15px',
+    width: '100%', 
   },
   label: {
     display: 'block', 
