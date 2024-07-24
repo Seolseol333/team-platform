@@ -11,15 +11,17 @@ function App() {
     fontSize: '48px',
     fontWeight: 'bold',
     padding: 50,
-    textAlign: 'center', // 텍스트를 중앙 정렬
+    textAlign: 'center', 
   };
 
   const containerStyle = {
-    display: 'flex', // 컨테이너를 flexbox로 설정
-    flexDirection: 'column', // flexbox 방향을 세로로 설정
-    alignItems: 'center', // 수직 중앙 정렬
-    justifyContent: 'center', // 수평 중앙 정렬
-    height: '100vh', // 화면 전체 높이 사용
+    display: 'flex', 
+    flexDirection: 'column', 
+    alignItems: 'center',
+    justifyContent: 'center', 
+    height: '100vh', 
+    padding: '20px',
+    boxSizing: 'border-box',
   };
 
   return (
@@ -27,10 +29,10 @@ function App() {
       <div style={containerStyle}>
         <Routes>
           <Route path="/" element={
-            <>
+            <div>
               <div style={style}>{name}</div>
               <SignUpForm />
-            </>
+            </div>
           } />
           <Route path="/terms" element={<TermsPage />} />
         </Routes>
