@@ -8,11 +8,12 @@ function App() {
     color: 'black',
     fontSize: '48px',
     fontWeight: 'bold',
-    padding: 50};
-  
+    padding: 50
+  };
+
   return (
     <div>
-      <div style={style}>{name} </div>
+      <div style={style}>{name}</div>
       <SignUpForm />
     </div>
   );
