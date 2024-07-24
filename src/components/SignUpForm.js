@@ -3,8 +3,9 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 
-const SignUpForm = () => {const navigate= useNavigate();
-    
+const SignUpForm = () => {
+  const navigate= useNavigate();
+
   const formik = useFormik({
     initialValues: {
       name: '',
