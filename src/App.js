@@ -24,6 +24,14 @@ function App() {
     boxSizing: 'border-box',
   };
 
+  const App = () => {
+    return (
+      <div className="App">
+        <TermsPage />
+      </div>
+    );
+  };
+
   return (
     <Router>
       <div style={containerStyle}>
