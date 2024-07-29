@@ -49,5 +49,10 @@ function App() {
   );
 }
 
+<<<<<<< HEAD
+=======
+/* div className을 써야 라우트가 랜더링 될 수 있도록 레이아웃과 스타일을 정의할 수 있음 */
+/*router -> className -> routes -> route 순서로 써줌으로써 각 요소를 누르면 각 경로로 이동할 수 있도록 정의해줌 */
+>>>>>>> 938571c (Update a)
 export default App;
 
